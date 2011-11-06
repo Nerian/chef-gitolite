@@ -22,9 +22,13 @@ require_recipe "git"
 bash 'install_gitolite' do
   cwd "/tmp"
   code <<-EOH  
+    echo 'git clone git://github.com/sitaramc/gitolite.git gitolite-source' 
     git clone git://github.com/sitaramc/gitolite.git gitolite-source
+    echo 'cd gitolite-source'
     cd gitolite-source
+    echo 'mkdir -p /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks'
     mkdir -p /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
+    echo 'src/gl-system-install /usr/local/bin /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks'
     src/gl-system-install /usr/local/bin /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
   EOH
   creates '/usr/local/bin/gl-setup'
