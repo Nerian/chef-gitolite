@@ -21,8 +21,7 @@ require_recipe "git"
 
 bash 'install_gitolite' do
   cwd "/tmp"
-  code <<-EOH
-    rm -rf gitolite-source
+  code <<-EOH  
     git clone git://github.com/sitaramc/gitolite gitolite-source
     cd gitolite-source
     mkdir -p /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
