@@ -24,13 +24,18 @@ bash 'install_gitolite' do
   code <<-EOH  
     echo 'git clone git://github.com/sitaramc/gitolite.git gitolite-source' 
     git clone git://github.com/sitaramc/gitolite.git gitolite-source
+    echo $?
     echo 'cd gitolite-source'
     cd gitolite-source
+    echo $?
     echo 'mkdir -p /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks'
     mkdir -p /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
+    echo $?
     echo 'src/gl-system-install /usr/local/bin /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks'
     src/gl-system-install /usr/local/bin /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
+    echo $?
   EOH
+  echo $?
   [0]
 end
 
