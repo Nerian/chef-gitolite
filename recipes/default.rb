@@ -25,7 +25,6 @@ bash 'install_gitolite' do
     rm -rf gitolite-source
     git clone git://github.com/sitaramc/gitolite gitolite-source
     cd gitolite-source
-    git checkout -t -f origin/pu
     mkdir -p /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
     src/gl-system-install /usr/local/bin /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
   EOH
