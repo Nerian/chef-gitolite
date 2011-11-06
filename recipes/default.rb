@@ -36,7 +36,6 @@ bash 'install_gitolite' do
     src/gl-system-install /usr/local/bin /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
     echo $?
   EOH
-  echo $?
   [0]
 end
 
