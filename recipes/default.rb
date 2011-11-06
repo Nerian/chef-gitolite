@@ -22,6 +22,7 @@ require_recipe "git"
 bash 'install_gitolite' do
   cwd "/tmp"
   code <<-EOH  
+    whoami
     echo 'git clone git://github.com/sitaramc/gitolite.git gitolite-source' 
     git clone git://github.com/sitaramc/gitolite.git gitolite-source
     echo $?
