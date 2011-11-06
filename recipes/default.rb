@@ -31,7 +31,6 @@ bash 'install_gitolite' do
     echo 'src/gl-system-install /usr/local/bin /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks'
     src/gl-system-install /usr/local/bin /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
   EOH
-  creates '/usr/local/bin/gl-setup'
 end
 
 gitolite_instances = node['gitolite']
